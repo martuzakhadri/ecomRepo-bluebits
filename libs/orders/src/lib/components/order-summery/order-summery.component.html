@@ -1,0 +1,18 @@
+<div class="order-summery">
+    <h3>Oder Summary</h3>
+    <div class="summery-price">
+        <span>Item Price</span>
+        <span>{{totalPrice | currency}}</span>
+    </div>
+    <div class="summery-price">
+        <span>Delivery Charges</span>
+        <span>free</span>
+    </div>
+    <div class="summery-price">
+        <span>Total</span>
+        <span>{{totalPrice | currency }}</span>
+    </div>
+    <div class="checkout-button" *ngIf="!ischeckout">
+        <p-button label="CheckOut" (onClick)="gotocheckout()"></p-button>
+    </div>
+</div>
